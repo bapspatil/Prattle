@@ -10,6 +10,13 @@ class PrattleApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Prattle',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'IBM Plex Sans',
+        primaryColor: Colors.red[700],
+        primaryColorDark: Colors.red[900],
+        accentColor: Colors.amberAccent,
+      ),
       home: ChatScreen(),
     );
   }
@@ -27,7 +34,7 @@ class ChatScreenState extends State<ChatScreen> {
     return IconTheme(
       data: IconThemeData(color: Theme.of(context).accentColor),
       child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 8.0),
+          margin: EdgeInsets.fromLTRB(16.0, 4.0, 8.0, 4.0),
           child: Row(
             children: [
               Flexible(
@@ -57,7 +64,10 @@ class ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prattle'),
+        title: Text(
+          'Prattle',
+          style: TextStyle(fontFamily: 'Playfair Display'),
+        ),
       ),
       body: _buildTextComposer(),
     );
