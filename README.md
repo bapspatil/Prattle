@@ -3,6 +3,10 @@
 
 A Flutter chat app with Firebase and a customisable UI.
 
+## Screenshots
+
+<img src="./design/screen0.png">
+
 ## Developed By
 
 Bapusaheb Patil
